@@ -1,0 +1,23 @@
+<!-- index.wxml -->
+<view class="container" style="position: relative; left: 0rpx; top: 220rpx">
+  <!-- 搜索区域 -->
+  <view class="search-area">
+    <input style="width: 487rpx; display: block; box-sizing: border-box" 
+      placeholder="搜索联系人" 
+      bindinput="onSearchChange" 
+      value="{{searchQuery}}" 
+      class="search-input"
+    />
+    <button bindtap="goToAddContact" class="add-contact-btn" style="position: relative; left: 17rpx; top: 0rpx">添加联系人</button>
+  </view>
+
+  <!-- 联系人列表 -->
+  <view class="contact-list">
+    <block wx:for="{{filteredContacts}}" wx:key="id">
+      <view class="contact-item" bindtap="goToContactDetail" data-id="{{item._id}}">
+        <text class="contact-name">{{item.name}}</text>
+        <text class="contact-phone">{{item.phone}}</text>
+      </view>
+    </block>
+  </view>
+</view>

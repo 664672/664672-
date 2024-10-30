@@ -1,0 +1,36 @@
+/* 页面容器样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* 按钮容器样式 */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 20px; /* 距离底部的间距 */
+}
+
+/* 保存修改按钮样式 */
+.save-button {
+  background-color: #4CAF50; /* 绿色 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* 删除按钮样式 */
+.delete-button {
+  background-color: #f44336; /* 红色 */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
